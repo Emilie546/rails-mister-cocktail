@@ -1,0 +1,41 @@
+
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1551024709-8f23befc6f87?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2025&q=80);">
+  <div class="container">
+    <h1>Fancy Cocktails</h1>
+    <p>This is our mixology book</p>
+    <%= link_to "Add a cocktail", new_cocktail_path, class: "btn btn-outline-light" %>
+  </div>
+</div>
+
+<div class="container">
+  <div class="cards">
+    <% @cocktails.each do |c| %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1536935338788-846bb9981813?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2186&q=80')">
+      <%= link_to c.name, cocktail_path(c) %>
+    </div>
+    <% end %>
+  </div>
+
+</div>
+
+<!-- <div class="cards">
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+    Breakfast
+  </div> class: "btn btn-ghost"
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+    Lunch
+  </div>
+
+  <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url()">
+    Dinner
+  </div>
+</div>
+
+<% @cocktails.each do |c| %>
+  <ul>
+    <li><%= link_to c.name, cocktail_path(c) %></li>
+  </ul>
+  <% end %>
+</div> -->

@@ -1,0 +1,11 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/collection/9282742);">
+  <%= link_to "List", cocktails_path, class: "btn btn-outline-light" %>
+</div>
+<div class="container">
+  <div class="card-form">
+    <%= simple_form_for @cocktail do |f| %>
+      <%= f.input :name %>
+      <%= f.button :submit, class: 'btn btn-outline-dark' %>
+    <% end %>
+  </div>
+</div>

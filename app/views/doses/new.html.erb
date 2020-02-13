@@ -1,0 +1,13 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://source.unsplash.com/collection/9282742);">
+  <h1>New Dose</h1>
+</div>
+<div class="container">
+  <div class="card-form">
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :description %>
+      <%= f.association :ingredient %>
+      <%= f.button :submit, class: 'btn btn-outline-dark' %>
+    <% end %>
+  </div>
+</div>
+<!-- , class="btn btn-outline-secondary"  -->
